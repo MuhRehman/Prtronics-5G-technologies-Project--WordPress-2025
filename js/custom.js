@@ -20,40 +20,45 @@ function showSlides() {
 
 
 
+// slider------------
+const tcardItems = document.querySelectorAll(".tcard-item");
+const tcardDots = document.querySelectorAll(".tcard-dot");
+let tcardIndex = 0;
 
-
-
-
-
-
-
-
-
-
-
-// -----------------------slider -----
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
-let current = 1;
-
-function changeSlide(index) {
-  slides.forEach((s, i) => {
-    s.classList.toggle("active", i === index);
-  });
-  dots.forEach((d, i) => {
-    d.classList.toggle("active", i === index);
-  });
-  current = index;
+// Detect if on mobile
+function isMobile() {
+  return window.innerWidth <= 600;
 }
 
-dots.forEach((dot, index) => {
-  dot.addEventListener("click", () => changeSlide(index));
+// Set active slide + dot
+function tcardSetActive(index) {
+
+   if (isMobile()) return; // Disable active highlighting logic on mobile
+
+  tcardItems.forEach(item => item.classList.remove("tcard-active"));
+  tcardDots.forEach(dot => dot.classList.remove("tcard-dot-active"));
+
+  tcardItems[index].classList.add("tcard-active");
+  tcardDots[index].classList.add("tcard-dot-active");
+
+  tcardIndex = index;
+}
+
+// Click event for dots
+tcardDots.forEach((dot, index) => {
+  dot.addEventListener("click", () => tcardSetActive(index));
 });
 
 // Auto slide every 4 seconds
 setInterval(() => {
-  let next = (current + 1) % slides.length;
-  changeSlide(next);
+    if (isMobile()) return; // skip for mobile
+  let next = (tcardIndex + 1) % tcardItems.length;
+  tcardSetActive(next);
 }, 4000);
 
-// -----------------------slider -----
+
+
+
+// slider------------
+
+
