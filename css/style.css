@@ -109,7 +109,9 @@ img {
 .card-wrapper {
   display: flex;
 }
-
+.router-img  img {
+  width: 100%;
+}
 .router-wrapper {
   display: flex;
 }
@@ -934,6 +936,14 @@ img {
 
 /* Tablets (medium screens) */
 @media (max-width: 1024px) and (min-width: 768px) {
+  /* Logo */
+.footer-logo img {
+  width: 100%;
+  height: auto;
+}
+.footer-logo {
+    width: 60%;
+}
     .subscribe-bar {
         flex-direction: row;
         height: auto;
@@ -978,6 +988,9 @@ img {
 
 /* Mobile (small screens) */
 @media (max-width: 767px) {
+  .footer-logo {
+    width: 60%;
+}
   .left-image-card img {
     height: 30%;
   }
@@ -1003,5 +1016,10 @@ img {
     .subscribe-bar button {
         width: 100%;
         margin-top: 0px;
+    }
+    /* Logo */
+    .footer-logo img {
+      width: 100%;
+      height: auto;
     }
 }
