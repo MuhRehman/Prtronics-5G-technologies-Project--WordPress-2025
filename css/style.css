@@ -40,7 +40,6 @@ img {vertical-align: middle;}
     color: #6FC500;
 
 }
-
 .dots-wrapper {
     margin-top: -120px;
     text-align: center;
@@ -48,8 +47,8 @@ img {vertical-align: middle;}
     position: absolute;
     left: 48%;
     /* border: 3px solid red !important; */
-}
 
+}
 /* The dots/bullets/indicators */
 .dot {
   height: 15px;
