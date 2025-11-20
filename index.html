@@ -10,17 +10,97 @@
 
 <body>
 
+ <header class="site-header">
+    <!-- Promo bar -->
+    <div class="promo-bar" role="region" aria-label="Announcement">
+      Emergency-ready delivery in 3–5 days
+    </div>
 
+    <!-- Utility bar -->
+    <div class="utility-bar">
+      <div class="container">
+        <nav class="utility-nav" aria-label="Utility navigation">
+          <a href="#">Residential</a>
+          <a href="#">Business</a>
+          <a href="#">Wholesale</a>
+        </nav>
+
+        <div class="utility-actions">
+          <a href="#" class="icon-btn" aria-label="Instagram">
+            <!-- Simple Instagram-style glyph (no external libs) -->
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="2.5" y="2.5" width="19" height="19" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+              <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/>
+              <circle cx="18" cy="6" r="1.6" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="#" class="icon-btn" aria-label="Facebook">
+            <!-- Simple Facebook-style glyph -->
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M13.6 8H12.2c-.9 0-1.4.6-1.4 1.5V11H9v2h1.8v5h2.1v-5h1.7l.5-2h-2.2v-1c0-.3.2-.5.6-.5H14l-.4-1z" fill="currentColor"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main navigation -->
+    <div class="main-nav">
+      <div class="container">
+        <a class="brand" href="#" aria-label="prtronios home">
+       
+        <img src="./assets/footer-logo.png" alt="PRtronics Logo">
+        </a>
+
+        <!-- Mobile toggle -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="hamburger" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </label>
+
+        <nav id="primary-navigation" class="primary-nav" aria-label="Primary">
+          <a class="active-link" href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Plans</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Partners</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" class="chip chip--filled" aria-pressed="true">ES</button>
+            <button type="button" class="chip" aria-pressed="false">EN</button>
+          </div>
+          <a href="#" class="btn btn--cta">Log In</a>
+        </div>
+      </div>
+    </div>
+  </header>
   <div class="slideshow-container">
 
     <div class="mySlides fade">
       <img src="./assets/banner-bg1.png" style="width:100%">
       <div class="overlay"></div> <!-- Black overlay -->
-      <div class="banner-inner">
+       <div class="banner-inner">
+          
+        <div class="btn-wrapper-top">
+            <button class="check-btn1" >Check Coverage</button>
+            <button class="check-btn2">Check Coverage</button>
+        </div>
 
-        <div class="numbertext banner-text">Internet that keeps you <span>online</span>
-          when the world goes offline.</div>
-        <button class="check-btn">Check Coverage</button>
+        <div class="numbertext banner-text">
+          <h1>Inte<span>online</span> whgoes offline.</h1>
+        </div>
+        
+          
+          <div class="btn-wrapper-bottom">
+            <button class="check-btn1" >Check Coverage</button>
+            <button class="check-btn2">Check Coverage</button>
+          </div>
+
       </div>
 
       <!-- <button>View Plans</button> -->
@@ -31,9 +111,23 @@
       <div class="overlay"></div> <!-- Black overlay -->
 
       <div class="banner-inner">
+          
+        <div class="btn-wrapper-top">
+            <button class="check-btn1" >Check Coverage</button>
+            <button class="check-btn2">Check Coverage</button>
+        </div>
 
-        <div class="numbertext banner-text">Inte<span>online</span> whgoes offline.</div>
-        <button class="check-btn">Check Coverage</button>
+        <div class="numbertext banner-text">
+          Inte<span>online</span> 
+          whgoes offline.
+        </div>
+        
+          
+          <div class="btn-wrapper-bottom">
+            <button class="check-btn1" >Check Coverage</button>
+            <button class="check-btn2">Check Coverage</button>
+          </div>
+
       </div>
     </div>
 
