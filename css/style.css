@@ -652,19 +652,44 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 /* -------about---- */
 .custom-row {
   display: flex;
-  gap: 1rem;                 /* space between columns */
-  align-items: stretch;      /* equal heights by default */
+  gap: 1rem;                 
+  align-items: stretch;      
 }
-
-.custom-col img {
+.custom-row .custom-col img {
   width: 100%;
-  height: auto;
 }
-.custom-col {
+.custom-row .custom-col {
   flex: 1 1 0;               /* split space 50/50 */
   min-width: 0;              /* prevent overflow from long content */
   box-sizing: border-box;    /* padding/border don’t expand width */
 }
+
+.custom-container .inner-about p {
+
+  color: #62697B;
+}
+.custom-container .inner-about h1 {
+  color: #62697B;
+  font-size: 2.5rem;
+}
+.custom-container .custom-col .banner__content {
+     margin-top: 10%;
+     margin-bottom: 10%;
+}
+.about-container .inner-about {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.about-banner .custom-col img {
+  margin-top: 15%;
+}
+
+.about-container .custom-col img {
+  width: 100%;
+  height: auto;
+  margin-top: 15%;
+}
+
 .banner-container {
     width: 100%;
   padding-right: 15px;
@@ -691,9 +716,69 @@ border-radius: 12px 12px 12px 12px;
 .WeAre-section h4 span {
   color: #FDA803;
 }
-.WeAre-section h4 {
-font-size: 3rem;
-} 
+
+  .WeAre-section h4 {
+  font-size: 3rem;
+  } 
+
+.banner-about-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 2px solid red;
+}
+
+
+.WeAre-section {
+
+}
+
+/* Layout */
+.who-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Image */
+.who-image {
+  flex: 0 0 40%;
+}
+
+.who-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Text */
+.who-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .who-we-are {
+    padding: 30px 20px;
+  }
+
+  .who-header h2 {
+    font-size: 40px;
+    padding: 10px 18px;
+  }
+
+  .who-content {
+    flex-direction: column;
+  }
+
+  .who-image {
+    flex-basis: auto;
+  }
+}
 /* -------about---- */
 
 /* --------left image card -------- */
@@ -849,7 +934,7 @@ font-size: 3rem;
 
 }
 .router-text {
-  width: 100%;
+  width: 50%;
 }
 .router-text span {
   color: #6FC500;
@@ -1031,9 +1116,59 @@ font-size: 3rem;
   padding: 7%;
   background-color: #f9f9f9;
 }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+.custom-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
+.custom-container .card-content h2 {
+  text-align: left;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  margin-top: 10%;
+  color: #62697B;
+}
+
+.custom-container .serve-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 5%;
+  margin-top: 20%;
+  color: #62697B;
+}
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+.subscribe-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px;
+    margin-bottom: -67px;
+    background-color: #6FC500;
+    border-radius: 60px;
+    height: auto; /* Let height adjust based on content */
+    gap: 15px; /* Adds space between items */
+}
 /* -------------footer---------------- */
 /* Responsive: stack vertically on mobile */
+
+/* Responsive max-widths at breakpoints */
+
 @media (max-width: 768px) {
     body {
     height: auto;
@@ -1109,12 +1244,9 @@ font-size: 3rem;
     width: 100%;
 }
   /* banner---------- */
+  .split { grid-template-columns: 1fr; } 
+}
 
-}
-/* Responsive: stack on small screens */
-@media (max-width: 768px) {
-  .split { grid-template-columns: 1fr; } /* becomes 100% width stacked */
-}
 
 /* Make it stack to 1 per row on small screens */
 @media (max-width: 600px) {
@@ -1195,43 +1327,19 @@ font-size: 3rem;
     flex: 1 1 100%;
     /* 1 card per row */
   }
+  .router-text .view-btn {
+    margin-left: 20%;
 }
-
-/* ---------------- */
-/* ---------------- */
-/* Base container  .container */
-/* card serve */
-/* Hover effect */
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-}
-.custom-container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.custom-container .card-content h2 {
-  text-align: left;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  margin-top: 10%;
-  color: #62697B;
-}
-
 .custom-container .serve-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 5%;
-  margin-top: 20%;
-  color: #62697B;
+    font-size: 1.8rem;
+}
 }
 
+/* ---------------- */
 
-/* Responsive max-widths at breakpoints */
+
+
+
 @media (min-width: 576px) {
   .custom-container {
     max-width: 540px;
@@ -1281,16 +1389,6 @@ font-size: 3rem;
 /* ---------------- */
 
 
-@keyframes fade {
-  from {
-    opacity: .4
-  }
-
-  to {
-    opacity: 1
-  }
-}
-
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {
@@ -1298,18 +1396,8 @@ font-size: 3rem;
   }
 }
 
-.subscribe-bar {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 22px;
-    margin-bottom: -67px;
-    background-color: #6FC500;
-    border-radius: 60px;
-    height: auto; /* Let height adjust based on content */
-    gap: 15px; /* Adds space between items */
-}
+
+
 
 /* Large screens (desktops) */
 @media (min-width: 1024px) {
@@ -1379,10 +1467,21 @@ font-size: 3rem;
   .footer-logo {
     width: 60%;
 }
-  .left-image-card img {
-    height: 30%;
+  .footer {
+    margin-top: 30%;
   }
-    .router-container::before {
+  .left-image-card img {
+    height: 15%;
+  }
+  .left-image-card .card-content p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .custom-container .card-content h2 {
+   text-align: center;
+    font-size: 0.9rem;
+}
+  .router-container::before {
     display: none;
    }
  .router-wrapper {
@@ -1438,5 +1537,6 @@ font-size: 3rem;
 }
 /* Motion respect */
 @media (prefers-reduced-motion: reduce){
-  *{ animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  *{ animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
+     transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
