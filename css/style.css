@@ -647,7 +647,10 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   background: #7ed321;
   transform: scale(1.2);
 }
-
+.flex-wrapper {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
 
 /* -------about---- */
 .custom-row {
@@ -706,6 +709,7 @@ border-radius: 12px 12px 12px 12px;
 .values-section .serve-title {
   text-align: center;
   margin-top: 10%;
+  font-size: 48px;
 }
 .WeAre-section 
 {
@@ -741,7 +745,16 @@ border-radius: 12px 12px 12px 12px;
   gap: 40px;
   align-items: flex-start;
 }
-
+.who-text p {
+  font-size: 1rem;
+  color: #f2f2f2;
+}
+.green-card {
+  background-color: #5ac000;
+}
+.green-card .card-content h2 , p {
+  color: #fff;
+}
 /* Image */
 .who-image {
   flex: 0 0 40%;
